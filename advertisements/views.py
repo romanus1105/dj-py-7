@@ -26,6 +26,6 @@ class AdvertisementViewSet(ModelViewSet):
         return [permission() for permission in permission_classes]
     filter_backends = [DjangoFilterBackend]
     filterset_class = AdvertisementFilter
-    filterset_fields = ['creator']
+    filterset_fields = ['creator', 'status']
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
-
+        
